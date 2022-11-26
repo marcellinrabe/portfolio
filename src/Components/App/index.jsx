@@ -21,12 +21,11 @@ import Parcours from '../Parcours';
 import Skills from '../Skills';
 import Works from '../Works';
 import Contact from '../Contact';
-
 library.add(
     fas,
     faMapMarkerAlt,
-    faMobile,
     faGlobe,
+    faMobile,
     faPaperPlane,
     faClone,
     faExternalLinkAlt

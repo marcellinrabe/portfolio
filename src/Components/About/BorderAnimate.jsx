@@ -1,7 +1,3 @@
 export default function BorderAnimate({ children }) {
-    return (
-        <div className="border-animate">
-            <section>{children}</section>
-        </div>
-    );
+    return <div className="border-animate">{children}</div>;
 }

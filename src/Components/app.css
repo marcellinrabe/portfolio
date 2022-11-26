@@ -18,6 +18,13 @@
     }
 }
 
+@keyframes bounding {
+    50% {
+        opacity: 0;
+        transform: scale(0.7) translateY(3px);
+    }
+}
+
 :root {
     --sm: 10px;
     --md: 15px;
@@ -39,7 +46,7 @@ img[alt='cover'] {
 
 .border-animate {
     position: relative;
-    width: 175px;
+    width: 200px;
     height: 200px;
     display: flex;
     align-items: center;
@@ -50,11 +57,15 @@ img[alt='cover'] {
 
 .border-animate section {
     z-index: 999;
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
 }
 
-.border-animate::after {
+#about .img-container {
+    width: 200px;
+    height: 200px;
+}
+/* .border-animate::after {
     content: '';
     position: absolute;
     width: 300px;
@@ -69,7 +80,7 @@ img[alt='cover'] {
         rgb(191, 191, 218),
         rgb(45, 245, 5)
     );
-}
+} */
 
 nav.menu ul {
     list-style-type: none;
@@ -88,10 +99,34 @@ nav.menu ul li a {
     padding: var(--sm);
 }
 
-nav.menu li a:hover {
-    background-color: rgb(252, 213, 213);
-    color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+nav.menu li a:hover,
+.chat-options button {
+    background-color: var(--bs-pink);
+    color: var(--bs-white);
     border-radius: var(--lg);
+}
+
+.chat .message {
+    max-width: 80%;
+    width: max-content;
+}
+
+.chat .message.user-message {
+    justify-content: flex-end;
+}
+
+.chat-options {
+    overflow: auto hidden;
+    height: 50px;
+}
+
+.chat-options button {
+    padding: var(--sm);
+    margin: 0px var(--sm);
+}
+
+.chat-options button:nth-child(1) {
+    margin-left: 0px;
 }
 
 .underline {
@@ -109,6 +144,26 @@ nav.menu li a:hover {
 
 .three-dot {
     width: min-content;
+}
+
+.three-dot .dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--bs-dark);
+    margin: 0px 2px;
+    border-radius: 50%;
+    animation-name: bounding;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.three-dot .dot:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.three-dot .dot:nth-child(3) {
+    animation-delay: 600ms;
 }
 
 .paper-plane {
@@ -219,4 +274,8 @@ button:active {
 
 .w-half {
     width: 50%;
+}
+
+.d-contents {
+    display: contents;
 }
