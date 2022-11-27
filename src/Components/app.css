@@ -195,6 +195,40 @@ nav.menu li a:hover,
     overflow-wrap: no-wrap;
 }
 
+#window header button {
+    border: var(--bs-primary) 1px solid;
+    padding: var(--md);
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+#window header button.active {
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
+}
+
+#window header button:active {
+    transform: scale(1);
+}
+
+#window header button:nth-child(1) {
+    border-top-left-radius: var(--sm);
+}
+
+#window header button:last-of-type {
+    border-top-right-radius: var(--sm);
+    border-right-width: 1px;
+}
+
+.scolaire,
+.professional {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* .scolaire ul {
+    list-style-type: none;
+} */
 button {
     background-color: inherit;
     border-style: none;

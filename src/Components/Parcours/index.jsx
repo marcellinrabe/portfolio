@@ -1,9 +1,34 @@
+import Window from './Window';
+import Onglet from './Onglet';
+import Line from '../App/Line';
+
 export default function Parcours() {
+    const onglets = [
+        {
+            key: 1,
+            title: 'Scolaire',
+            content: (
+                <Onglet>
+                    <div>Parcours scolaire</div>
+                </Onglet>
+            ),
+        },
+        {
+            key: 2,
+            title: 'Professionnel',
+            content: (
+                <Onglet>
+                    <div>Parcours professionnel</div>
+                </Onglet>
+            ),
+        },
+    ];
     return (
         <div id="parcours">
-            <div className="vh-100 w-100 d-flex align-items-center justify-content-center">
-                Parcours
+            <div className="w-100">
+                <Window onglets={onglets} />
             </div>
+            <Line />
         </div>
     );
 }

@@ -1,5 +1,10 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, fas } from '@fortawesome/free-solid-svg-icons';
+import {
+    far,
+    faCalendarAlt,
+    faBuilding,
+} from '@fortawesome/free-regular-svg-icons';
 import {
     faMapMarkerAlt,
     faMobile,
@@ -7,6 +12,8 @@ import {
     faPaperPlane,
     faClone,
     faExternalLinkAlt,
+    faUniversity,
+    faUserTie,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -28,8 +35,13 @@ library.add(
     faMobile,
     faPaperPlane,
     faClone,
-    faExternalLinkAlt
+    faExternalLinkAlt,
+    faUniversity,
+    faGraduationCap,
+    faUserTie
 );
+
+library.add(far, faCalendarAlt, faBuilding);
 
 function App() {
     return (
