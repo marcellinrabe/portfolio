@@ -35,6 +35,8 @@ const datas = {
         textInfo: 'RABE Marcellin | Portfolio',
     },
     About: {
+        name: 'RABE',
+        firstName: 'Marcellin',
         img: {
             src: Me,
             alt: 'cover',
