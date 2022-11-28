@@ -10,7 +10,7 @@ export default function Chat() {
     return (
         <div className="chat new border m-auto">
             <div className="d-flex flex-column h-100">
-                <header className="py-4">
+                <header className="py-2 bg-light">
                     <div className="d-flex align-items-center h-100">
                         <img
                             src={img.src}

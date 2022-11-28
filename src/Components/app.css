@@ -130,13 +130,8 @@ nav.menu li a:hover,
 }
 
 .chat.new {
-    width: 350px;
+    width: 50%;
     height: 460px;
-}
-
-.chat.new header,
-.chat.new footer {
-    height: 10%;
 }
 
 .chat.new header {
@@ -260,6 +255,30 @@ nav.menu li a:hover,
 /* .scolaire ul {
     list-style-type: none;
 } */
+
+.grid.grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+th,
+td {
+    padding: var(--md);
+    border-color: var(--bs-border-color);
+    border-width: 1px;
+}
+
+#skills td span {
+    background-color: var(--bs-border-color);
+    padding: var(--sm);
+    border-radius: var(--md);
+    margin-left: var(--sm);
+}
+
+#skills td span:first-of-type {
+    margin-left: 0;
+}
+
 button {
     background-color: inherit;
     border-style: none;
@@ -281,32 +300,9 @@ button:active {
     transform: translate(-50%, -50%);
 }
 
-.absolute {
-    position: absolute;
-}
-
-.top-0 {
-    top: 0;
-}
-
-.flex {
-    display: flex;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.min-h-screen {
-    min-height: 100vh;
-}
-
-.h-screen-1\/2 {
-    height: 50vh;
+.flex-container {
+    min-width: max-content;
+    min-height: max-content;
 }
 
 .p-md {
@@ -343,4 +339,10 @@ button:active {
 
 .d-contents {
     display: contents;
+}
+
+@media screen and (max-width: 575px) {
+    * {
+        font-size: 14px;
+    }
 }

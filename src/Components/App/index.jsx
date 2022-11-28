@@ -15,7 +15,6 @@ import {
     faUniversity,
     faUserTie,
 } from '@fortawesome/free-solid-svg-icons';
-
 import { ParallaxProvider } from 'react-scroll-parallax';
 import DataProvider from './DataProvider';
 import 'bootstrap/dist/css/bootstrap.css';

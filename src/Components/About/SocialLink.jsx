@@ -55,7 +55,7 @@ export default function SocialLink({ socialNavlink }) {
 
     return (
         <div className="vh-50 d-flex justify-content-center">
-            <div className="bg-light rounded-3 w-50">
+            <div className="bg-light rounded-3 w-50 flex-container">
                 <div className="social-link d-flex justify-content-center">
                     {socialNavlink.datas.map(
                         ({ key, iconClass, label, link }, index) => (
