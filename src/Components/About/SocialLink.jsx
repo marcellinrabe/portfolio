@@ -54,14 +54,14 @@ export default function SocialLink({ socialNavlink }) {
     };
 
     return (
-        <div className="vh-50 d-flex justify-content-center">
-            <div className="bg-light rounded-3 w-50 flex-container">
+        <div className="row justify-content-center">
+            <div className="bg-light rounded-3 col-9 col-md-8 col-lg-6 flex-container">
                 <div className="social-link d-flex justify-content-center">
                     {socialNavlink.datas.map(
                         ({ key, iconClass, label, link }, index) => (
                             <div
                                 key={'socialNavlink' + index + key}
-                                className={`social-nav-link ${key} text-center mx-3 mt-3 p-3 rounded-1`}
+                                className={`social-nav-link ${key} text-center mx-2 mx-sm-3 mt-3 p-3 rounded-1`}
                                 onClick={(event) => updateLink(event, link)}
                             >
                                 <div>
@@ -72,21 +72,24 @@ export default function SocialLink({ socialNavlink }) {
                         )
                     )}
                 </div>
-                <div className="m-3">
+                <div className="my-3 m-sm-3">
                     <div className="position-relative bg-white">
-                        <div
-                            ref={linkContainer}
-                            className="text-break p-3 profile-name"
-                        ></div>
+                        <div className="text-break p-3 profile-name">
+                            <a
+                                ref={linkContainer}
+                                href={'profile link'}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'var(--bs-dark)',
+                                }}
+                            >
+                                {''}
+                            </a>
+                        </div>
                         <div className="position-absolute top-0 end-0 translate-half-py">
                             <button>
                                 <FontAwesomeIcon
                                     icon={socialNavlink.cloneIcon}
-                                />
-                            </button>
-                            <button>
-                                <FontAwesomeIcon
-                                    icon={socialNavlink.externalLinkIcon}
                                 />
                             </button>
                         </div>

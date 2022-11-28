@@ -39,8 +39,8 @@ export default function Window({ onglets }) {
     }, [currentOpen, onglets]);
 
     return (
-        <div id="window" className="w-75 m-auto">
-            <header className="w-75">
+        <div id="window" className="col-11 m-auto">
+            <header>
                 {onglets.map(({ key, title, content }) => (
                     <button
                         key={key + title}

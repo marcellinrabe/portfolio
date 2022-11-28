@@ -25,7 +25,7 @@ export default function Parcours() {
     ];
     return (
         <div id="parcours">
-            <div className="w-100">
+            <div className="row justify-content-center">
                 <Window onglets={onglets} />
             </div>
             <Line />

@@ -33,10 +33,12 @@
 
 body {
     font-family: 'DM Sans';
+    font-size: 14px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    min-width: 340px;
 }
 
 img[alt='cover'] {
@@ -225,6 +227,10 @@ textarea:focus {
     overflow-wrap: no-wrap;
 }
 
+#window {
+    min-width: max-content;
+}
+
 #window header button {
     border: var(--bs-primary) 1px solid;
     padding: var(--md);
@@ -250,6 +256,10 @@ textarea:focus {
     border-right-width: 1px;
 }
 
+#skills {
+    overflow-x: auto;
+}
+
 .scolaire,
 .professional {
     display: grid;
@@ -260,19 +270,28 @@ textarea:focus {
     list-style-type: none;
 } */
 
-.grid {
-    display: grid;
-}
 .grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.grid.grid-cols-3 {
+.grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 
 .gap-16 {
     gap: 16px;
+}
+
+.row-gap-4 {
+    row-gap: 4px;
+}
+
+.row-gap-16 {
+    row-gap: 16px;
+}
+
+.col-gap-16 {
+    column-gap: 16px;
 }
 
 th,
@@ -293,8 +312,12 @@ td {
     margin-left: 0;
 }
 
+.Card {
+    width: 100%;
+    max-width: 275px;
+}
+
 .Card .img-container {
-    width: 275px;
     height: 300px;
     position: relative;
 }
@@ -309,7 +332,8 @@ td {
     position: absolute;
     top: 0;
     left: 0;
-    width: 275px;
+    max-width: 275px;
+    width: 100%;
     height: 300px;
     transform: translate(-5%, -5%);
     border: var(--bs-border-color) 1px solid;
@@ -346,8 +370,12 @@ button:active {
     padding: var(--md);
 }
 
-.text-2xl {
-    font-size: 90px;
+.title-2xl {
+    font-size: 70px;
+}
+
+.title-md {
+    font-size: 18.5px;
 }
 
 .text-white {
@@ -374,8 +402,35 @@ button:active {
     display: contents;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 992px) {
+    .w-lg-50 {
+        width: 50% !important;
+    }
+}
+@media (min-width: 768px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+
+    .form {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 576px) {
     * {
-        font-size: 14px;
+        font-size: medium;
+    }
+
+    .w-sm-75 {
+        width: 75% !important;
+    }
+
+    .title-2xl {
+        font-size: 90px;
+    }
+
+    .title-md {
+        font-size: 18.5px;
     }
 }

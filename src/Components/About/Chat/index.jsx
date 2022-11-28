@@ -8,7 +8,7 @@ export default function Chat() {
     const [messages, setMessages] = useState([]);
 
     return (
-        <div className="chat new border w-100">
+        <div className="chat new border m-auto">
             <div className="d-flex flex-column h-100">
                 <header className="py-2">
                     <div className="d-flex align-items-center h-100">

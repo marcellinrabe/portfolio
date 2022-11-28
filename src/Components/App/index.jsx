@@ -4,7 +4,6 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import DataProvider from './DataProvider';
-import Cover from '../Cover';
 import About from '../About';
 import Parcours from '../Parcours';
 import Skills from '../Skills';

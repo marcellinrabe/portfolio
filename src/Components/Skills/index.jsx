@@ -1,9 +1,7 @@
-import Line from '../App/Line';
-
 export default function Skills() {
     return (
-        <div id="skills" className="vh-100 d-flex flex-column">
-            <table className="w-75 border m-auto text-center">
+        <div id="skills" className="row justiy-content-center px-5 px-sm-0">
+            <table className="col-11 col-md-8 border m-auto text-center">
                 <thead>
                     <tr>
                         <th>Langages</th>
@@ -20,29 +18,35 @@ export default function Skills() {
                     <tr>
                         <td>css3</td>
                         <td>
-                            <span>scss</span>
-                            <span>Bootstrap</span>
-                            <span>tailwindcss</span>
+                            <div className="d-flex flex-wrap row-gap-4">
+                                <span>scss</span>
+                                <span>Bootstrap</span>
+                                <span>tailwindcss</span>
+                            </div>
                         </td>
                         <td>responsive design</td>
                     </tr>
                     <tr>
                         <td>javascript</td>
                         <td>
-                            <span>nodejs</span>
-                            <span>reactjs</span>
-                            <span>react-native</span>
-                            <span>express-js</span>
-                            <span>typescript</span>
+                            <div className="d-flex flex-wrap row-gap-4">
+                                <span>nodejs</span>
+                                <span>reactjs</span>
+                                <span>react-native</span>
+                                <span>express-js</span>
+                                <span>typescript</span>
+                            </div>
                         </td>
                         <td>AJAX</td>
                     </tr>
                     <tr>
                         <td>php</td>
                         <td>
-                            <span>laravel</span>
-                            <span>livewire</span>
-                            <span>phpmailer</span>
+                            <div className="d-flex flex-wrap row-gap-4">
+                                <span>laravel</span>
+                                <span>livewire</span>
+                                <span>phpmailer</span>
+                            </div>
                         </td>
                         <td>MVC Pattern</td>
                     </tr>
@@ -61,7 +65,6 @@ export default function Skills() {
                     </tr>
                 </tbody>
             </table>
-            <Line />
         </div>
     );
 }

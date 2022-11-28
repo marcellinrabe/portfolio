@@ -43,26 +43,29 @@ const cards = [
 ];
 export default function Works() {
     return (
-        <div id="works" className="vh-100 w-75 m-auto">
-            <div className="grid grid-cols-3 gap-16">
-                {cards.map(
-                    ({ key, project, desc, github_link, img }, index) => (
-                        <Card
-                            key={key + index}
-                            project={project}
-                            desc={desc}
-                            github_link={github_link}
-                            img={img}
-                        />
-                    )
-                )}
-            </div>
-            <div className="text-center my-5">
-                <button className="bg-dark text-white p-2 rounded-1">
-                    Voir tout sur github
-                </button>
-            </div>
+        <div id="works">
             <Line />
+            <div className="w-75 m-auto">
+                <div className="row flex-wrap row-gap-16">
+                    {cards.map(
+                        ({ key, project, desc, github_link, img }, index) => (
+                            <Card
+                                key={key + index}
+                                project={project}
+                                desc={desc}
+                                github_link={github_link}
+                                img={img}
+                            />
+                        )
+                    )}
+                </div>
+                <div className="text-center mt-5">
+                    <button className="bg-dark text-white p-2 rounded-1">
+                        Voir tout sur github
+                    </button>
+                </div>
+                <Line />
+            </div>
         </div>
     );
 }

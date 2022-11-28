@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Contact() {
     return (
         <div id="contact">
-            <div className="vh-100 d-flex justify-content-center align-items-center">
-                <div className="w-50 p-3">
+            <div className=" mx-2 mx-sm-0 row justify-content-center align-items-center">
+                <div className="col-sm-9 col-md-8 col-lg-6 form-lg pb-5">
                     <div className="d-flex">
                         <div
                             className="border border-end-0"
