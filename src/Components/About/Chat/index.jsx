@@ -8,9 +8,9 @@ export default function Chat() {
     const [messages, setMessages] = useState([]);
 
     return (
-        <div className="chat new border m-auto">
+        <div className="chat new border w-100">
             <div className="d-flex flex-column h-100">
-                <header className="py-2 bg-light">
+                <header className="py-2">
                     <div className="d-flex align-items-center h-100">
                         <img
                             src={img.src}
@@ -24,7 +24,7 @@ export default function Chat() {
                     {messages && (
                         <div className="d-flex align-items-end justify-content-center h-100">
                             <button className="bg-primary text-white p-2 rounded-5">
-                                Demarrer
+                                Démarrer
                             </button>
                         </div>
                     )}
@@ -33,7 +33,7 @@ export default function Chat() {
                     <div className=" position-relative bg-light w-100 border rounded-5 py-2 px-3">
                         <input type="text" className="border-0 bg-light" />
                         <button className="position-absolute top-0 end-0">
-                            <FontAwesomeIcon icon={['fas', 'paper-plane']} />
+                            <FontAwesomeIcon icon={['far', 'paper-plane']} />
                         </button>
                     </div>
                 </footer>

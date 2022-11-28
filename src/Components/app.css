@@ -82,10 +82,13 @@ img[alt='cover'] {
     );
 } */
 
+nav.menu {
+    height: 15vh;
+}
+
 nav.menu ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
 }
 
 nav.menu ul li {
@@ -95,13 +98,13 @@ nav.menu ul li {
 nav.menu ul li a {
     text-decoration: none;
     text-transform: capitalize;
-    color: #fff;
+    color: var(--bs-success);
     padding: var(--sm);
 }
 
 nav.menu li a:hover,
 .chat-options button {
-    background-color: var(--bs-pink);
+    background-color: var(--bs-success);
     color: var(--bs-white);
     border-radius: var(--lg);
 }
@@ -130,7 +133,7 @@ nav.menu li a:hover,
 }
 
 .chat.new {
-    width: 50%;
+    max-width: 350px;
     height: 460px;
 }
 
@@ -365,10 +368,6 @@ button:active {
 
 .pt-vh-30 {
     padding-top: 30vh;
-}
-
-.w-half {
-    width: 50%;
 }
 
 .d-contents {

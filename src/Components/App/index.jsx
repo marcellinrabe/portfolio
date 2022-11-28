@@ -20,7 +20,6 @@ function App() {
         <DataProvider>
             <ParallaxProvider>
                 <div id="app" className="overflow-hidden">
-                    <Cover />
                     <About />
                     <Parcours />
                     <Skills />

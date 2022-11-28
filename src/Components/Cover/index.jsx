@@ -8,16 +8,10 @@ export default function Cover() {
 
     return (
         <div className="cover">
-            <div className="min-h-screen bg-dark overflow-hidden">
+            <div className="min-vh-100 overflow-hidden">
                 <Parallax speed={30} translateY={['0', '200', 'easeInOut']}>
-                    <div className="w-half m-auto text-center">
+                    <div className="m-auto text-center">
                         <Menu links={Cover.Menu.navLinks} />
-                        <p>
-                            <span className="text-title text-white">
-                                {Cover.textTitle}
-                            </span>
-                        </p>
-                        <p className="text-info">{Cover.textInfo}</p>
                     </div>
                 </Parallax>
             </div>

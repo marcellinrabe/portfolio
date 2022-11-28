@@ -5,11 +5,6 @@ const datas = {
         Menu: {
             navLinks: [
                 {
-                    key: 'a-propos',
-                    href: '#about',
-                    label: 'À propos',
-                },
-                {
                     key: 'parcours',
                     href: '#parcours',
                     label: 'parcours',
@@ -27,7 +22,7 @@ const datas = {
                 {
                     key: 'contact',
                     href: '#contact',
-                    label: 'contact',
+                    label: 'me contacter',
                 },
             ],
         },
@@ -77,7 +72,7 @@ const datas = {
                     link: 'https://www.facebook.com/rabemarcellin',
                 },
             ],
-            cloneIcon: ['fas', 'clone'],
+            cloneIcon: ['far', 'clone'],
             externalLinkIcon: ['fas', 'external-link-alt'],
         },
     },
