@@ -256,9 +256,19 @@ nav.menu li a:hover,
     list-style-type: none;
 } */
 
-.grid.grid-cols-2 {
+.grid {
     display: grid;
+}
+.grid-cols-2 {
     grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-16 {
+    gap: 16px;
 }
 
 th,
@@ -277,6 +287,29 @@ td {
 
 #skills td span:first-of-type {
     margin-left: 0;
+}
+
+.Card .img-container {
+    width: 275px;
+    height: 300px;
+    position: relative;
+}
+
+.Card .img-container img {
+    position: relative;
+    z-index: 999;
+}
+
+.Card .img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 300px;
+    transform: translate(-5%, -5%);
+    border: var(--bs-border-color) 1px solid;
+    border-radius: var(--bs-border-radius);
 }
 
 button {
