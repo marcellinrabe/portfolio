@@ -1,46 +1,19 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGraduationCap, fas } from '@fortawesome/free-solid-svg-icons';
-import {
-    far,
-    faCalendarAlt,
-    faBuilding,
-} from '@fortawesome/free-regular-svg-icons';
-import {
-    faMapMarkerAlt,
-    faMobile,
-    faGlobe,
-    faPaperPlane,
-    faClone,
-    faExternalLinkAlt,
-    faUniversity,
-    faUserTie,
-} from '@fortawesome/free-solid-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import DataProvider from './DataProvider';
-import 'bootstrap/dist/css/bootstrap.css';
-
 import Cover from '../Cover';
-
-import '../app.css';
 import About from '../About';
 import Parcours from '../Parcours';
 import Skills from '../Skills';
 import Works from '../Works';
 import Contact from '../Contact';
-library.add(
-    fas,
-    faMapMarkerAlt,
-    faGlobe,
-    faMobile,
-    faPaperPlane,
-    faClone,
-    faExternalLinkAlt,
-    faUniversity,
-    faGraduationCap,
-    faUserTie
-);
+import 'bootstrap/dist/css/bootstrap.css';
+import '../app.css';
 
-library.add(far, faCalendarAlt, faBuilding);
+library.add(fas, far, fab);
 
 function App() {
     return (

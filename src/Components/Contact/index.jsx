@@ -7,7 +7,7 @@ export default function Contact() {
                 <div className="w-50 p-3">
                     <div className="d-flex">
                         <div
-                            className="border"
+                            className="border border-end-0"
                             style={{
                                 width: 40,
                                 height: 40,

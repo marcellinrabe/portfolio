@@ -46,39 +46,39 @@ const datas = {
         opportunité qui sont bien sûr de la bienvenue
             `,
         location: {
-            iconClass: 'fa-map-marker-alt',
+            iconClass: ['fas', 'map-marker-alt'],
             label: 'Amboditsiry, Antananarivo',
         },
         mobileNumber: {
-            iconClass: 'fa-mobile',
+            iconClass: ['fas', 'mobile'],
             label: '+261 34 93 946 98',
         },
         socialNavlink: {
             datas: [
                 {
                     key: 'linkedin',
-                    iconClass: 'fa-globe',
+                    iconClass: ['fas', 'globe'],
                     label: 'Linkedin',
                     profileName: 'RABE Marcellin',
                     link: 'https://www.linkedin.com/marcellinrabe',
                 },
                 {
                     key: 'github',
-                    iconClass: 'fa-globe',
+                    iconClass: ['fas', 'globe'],
                     label: 'Github',
                     profileName: 'RABE Marcellin',
                     link: 'https://www.github.com/marcellinrabe',
                 },
                 {
                     key: 'facebook',
-                    iconClass: 'fa-globe',
+                    iconClass: ['fas', 'globe'],
                     label: 'Facebook',
                     profileName: 'Rabe Marcellin',
                     link: 'https://www.facebook.com/rabemarcellin',
                 },
             ],
-            cloneIcon: 'fa-clone',
-            externalLinkIcon: 'fa-external-link-alt',
+            cloneIcon: ['fas', 'clone'],
+            externalLinkIcon: ['fas', 'external-link-alt'],
         },
     },
 };
