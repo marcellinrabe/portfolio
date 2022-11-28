@@ -21,6 +21,7 @@ export default function Skills() {
                         <td>css3</td>
                         <td>
                             <span>scss</span>
+                            <span>Bootstrap</span>
                             <span>tailwindcss</span>
                         </td>
                         <td>responsive design</td>
@@ -52,6 +53,11 @@ export default function Skills() {
                             <span>FastAPI</span>
                         </td>
                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>-</td>
+                        <td>API</td>
                     </tr>
                 </tbody>
             </table>

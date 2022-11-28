@@ -142,7 +142,8 @@ nav.menu li a:hover,
     width: 90%;
 }
 
-.chat.new footer input:focus {
+input:focus,
+textarea:focus {
     outline: none;
 }
 
