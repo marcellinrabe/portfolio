@@ -2,9 +2,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import DataProvider from './DataProvider';
-import About from '../About';
+import Header from './Header';
+import Cover from '../Cover';
 import Parcours from '../Parcours';
 import Skills from '../Skills';
 import Works from '../Works';
@@ -17,15 +17,14 @@ library.add(fas, far, fab);
 function App() {
     return (
         <DataProvider>
-            <ParallaxProvider>
-                <div id="app" className="overflow-hidden">
-                    <About />
-                    <Parcours />
-                    <Skills />
-                    <Works />
-                    <Contact />
-                </div>
-            </ParallaxProvider>
+            <div id="app" className="overflow-hidden">
+                <Header />
+                <Cover />
+                <Parcours />
+                <Skills />
+                <Works />
+                <Contact />
+            </div>
         </DataProvider>
     );
 }

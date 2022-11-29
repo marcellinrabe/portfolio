@@ -29,6 +29,7 @@
     --sm: 10px;
     --md: 15px;
     --lg: 30px;
+    --linkedin: #0d2e5f;
 }
 
 body {
@@ -84,27 +85,27 @@ img[alt='cover'] {
     );
 } */
 
-nav.menu {
+header nav {
     height: 15vh;
 }
 
-nav.menu ul {
+header nav ul {
     list-style-type: none;
     display: flex;
 }
 
-nav.menu ul li {
+header nav ul li {
     margin: 0 var(--md);
 }
 
-nav.menu ul li a {
+header nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     color: var(--bs-success);
     padding: var(--sm);
 }
 
-nav.menu li a:hover,
+header nav ul li a:hover,
 .chat-options button {
     background-color: var(--bs-success);
     color: var(--bs-white);
@@ -340,6 +341,28 @@ td {
     border-radius: var(--bs-border-radius);
 }
 
+.clone {
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-delay: 300ms;
+    transition-timing-function: linear;
+}
+
+.clone.active::after {
+    transform: translate(-150%, 0%) scale(1);
+}
+
+.clone::after {
+    content: 'copied';
+    position: absolute;
+    transform: scale(0);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 1000ms;
+    transition-delay: 100ms;
+    transition-timing-function: linear;
+}
+
 button {
     background-color: inherit;
     border-style: none;
@@ -368,6 +391,10 @@ button:active {
 
 .p-md {
     padding: var(--md);
+}
+
+.text-linkedin {
+    color: var(--linkedin);
 }
 
 .title-2xl {
