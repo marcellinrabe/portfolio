@@ -11,6 +11,7 @@ import Works from '../Works';
 import Contact from '../Contact';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../app.css';
+import Particle from './Particles';
 
 library.add(fas, far, fab);
 
@@ -18,12 +19,16 @@ function App() {
     return (
         <DataProvider>
             <div id="app" className="overflow-hidden">
-                <Header />
-                <Cover />
-                <Parcours />
-                <Skills />
-                <Works />
-                <Contact />
+                <Particle>
+                    <div className="position-relative">
+                        <Header />
+                        <Cover />
+                        <Parcours />
+                        <Skills />
+                        <Works />
+                        <Contact />
+                    </div>
+                </Particle>
             </div>
         </DataProvider>
     );

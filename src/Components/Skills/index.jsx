@@ -1,7 +1,7 @@
 export default function Skills() {
     return (
         <div id="skills" className="row justiy-content-center px-5 px-sm-0">
-            <table className="col-11 col-md-8 border m-auto text-center">
+            <table className="bg-white col-11 col-md-8 border m-auto text-center">
                 <thead>
                     <tr>
                         <th>Langages</th>

@@ -7,7 +7,7 @@ export default function Contact() {
                 <div className="col-sm-9 col-md-8 col-lg-6 form-lg pb-5">
                     <div className="d-flex">
                         <div
-                            className="border border-end-0"
+                            className="border border-end-0 bg-white"
                             style={{
                                 width: 40,
                                 height: 40,
@@ -17,7 +17,7 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={['far', 'envelope']} />
                             </div>
                         </div>
-                        <div className="border w-100 px-2">
+                        <div className="border w-100 px-2 bg-white">
                             <input
                                 type="text"
                                 placeholder="votre adresse e-mail"

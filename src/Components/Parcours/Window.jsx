@@ -45,6 +45,7 @@ export default function Window({ onglets }) {
                     <button
                         key={key + title}
                         onClick={(event) => toggleCurrentopen(event, content)}
+                        className="bg-white"
                     >
                         {title}
                     </button>
@@ -53,7 +54,7 @@ export default function Window({ onglets }) {
             <section
                 ref={content}
                 id="content"
-                className="vh-100 border border-primary"
+                className="vh-100 border border-primary bg-white"
             >
                 {currentOpen.content}
             </section>
