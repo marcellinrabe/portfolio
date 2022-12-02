@@ -1,28 +1,22 @@
 import Window from './Window';
 import Onglet from './Onglet';
 import Line from '../App/Line';
+import { useContext } from 'react';
+import { dataContext } from '../App/DataProvider';
 
 export default function Parcours() {
-    const onglets = [
-        {
-            key: 1,
-            title: 'Scolaire',
-            content: (
-                <Onglet>
-                    <div>Parcours scolaire</div>
-                </Onglet>
-            ),
-        },
-        {
-            key: 2,
-            title: 'Professionnel',
-            content: (
-                <Onglet>
-                    <div>Parcours professionnel</div>
-                </Onglet>
-            ),
-        },
-    ];
+    const { Parcours } = useContext(dataContext);
+
+    const onglets = Parcours.map(({ id, label, datas }) => ({
+        key: id,
+        title: label,
+        content: (
+            <Onglet>
+                <div>{datas && `Parcours ${label}`}</div>
+            </Onglet>
+        ),
+    }));
+
     return (
         <div id="parcours">
             <div className="row justify-content-center">

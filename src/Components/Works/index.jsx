@@ -1,63 +1,24 @@
-import Keyboard from '../../assets/keyboard-light.gif';
 import Line from '../App/Line';
 import Card from './Card';
+import { useContext } from 'react';
+import { dataContext } from '../App/DataProvider';
 
-const cards = [
-    {
-        key: 1,
-        project: 'Project 1',
-        desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quas fugit saepe iure ullam quaerat omnis, quos accusantium nemo
-         quae quis.`,
-        github_link: 'https://www.github.com/marcellinrabe/didy-folo',
-        img: {
-            src: Keyboard,
-            alt: 'didy folo web view',
-        },
-    },
-    {
-        key: 2,
-        project: 'Project 2',
-        desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Non perferendis, ducimus, exercitationem cumque obcaecati facere 
-         totam quasi dignissimos, ut cum perspiciatis sunt aliquid impedit
-          rem architecto autem eos inventore laboriosam!`,
-        github_link: 'https://www.github.com/marcellinrabe/api-didy-folo',
-        img: {
-            src: Keyboard,
-            alt: 'didy folo web view',
-        },
-    },
-    {
-        key: 3,
-        project: 'Project 3',
-        desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-         eum inventore soluta laborum ipsa dolore sapiente fugiat sed?
-           eos deleniti dignissimos ipsa.`,
-        github_link: 'https://www.github.com/marcellinrabe/api-didy-folo',
-        img: {
-            src: Keyboard,
-            alt: 'didy folo web view',
-        },
-    },
-];
 export default function Works() {
+    const { Works } = useContext(dataContext);
     return (
         <div id="works">
             <Line />
             <div className="w-75 m-auto">
                 <div className="row flex-wrap row-gap-16">
-                    {cards.map(
-                        ({ key, project, desc, github_link, img }, index) => (
-                            <Card
-                                key={key + index}
-                                project={project}
-                                desc={desc}
-                                github_link={github_link}
-                                img={img}
-                            />
-                        )
-                    )}
+                    {Works.map(({ id, project, desc, github_link, img }) => (
+                        <Card
+                            key={id}
+                            project={project}
+                            desc={desc}
+                            github_link={github_link}
+                            img={img}
+                        />
+                    ))}
                 </div>
                 <div className="text-center mt-5">
                     <button className="bg-dark text-white p-2 rounded-1">

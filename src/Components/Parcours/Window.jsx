@@ -30,6 +30,8 @@ export default function Window({ onglets }) {
             };
 
             setCurrentopen(defaultValue);
+
+            console.log(onglets);
         } else {
             if (!(currentOpen.active === null)) {
                 currentOpen.prev.classList.remove('active');
