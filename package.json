@@ -28,6 +28,7 @@
     "rc-pagination": "^3.2.0",
     "react": "^18.2.0",
     "react-calendar": "^4.0.0",
+    "react-chatbot-kit": "^2.1.1",
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.15.0",

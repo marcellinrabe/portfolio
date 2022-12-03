@@ -14,32 +14,15 @@ export default function Particle({ children }) {
     }, []);
 
     return (
-        <>
+        <div className="position-relative">
             <Particles
                 init={particlesInit}
                 loaded={particlesLoaded}
+                className="position-absolute"
                 options={{
-                    fpsLimit: 60,
+                    fpsLimit: 120,
                     background: {
                         value: 'transparent',
-                    },
-                    interactivity: {
-                        events: {
-                            onClick: {
-                                enable: true,
-                                mode: 'push',
-                            },
-                            onHover: {
-                                enable: true,
-                                mode: '',
-                            },
-                            resize: true,
-                        },
-                        modes: {
-                            push: {
-                                quantity: 4,
-                            },
-                        },
                     },
                     particles: {
                         color: {
@@ -49,7 +32,7 @@ export default function Particle({ children }) {
                             color: '#000',
                             distance: 150,
                             enable: true,
-                            opacity: 0.3,
+                            opacity: 0.6,
                             width: 1,
                         },
                         collisions: {
@@ -73,7 +56,7 @@ export default function Particle({ children }) {
                             value: 20,
                         },
                         opacity: {
-                            value: 0.5,
+                            value: 0.2,
                         },
                         shape: {
                             type: 'circle',
@@ -86,6 +69,6 @@ export default function Particle({ children }) {
                 }}
             />
             {children}
-        </>
+        </div>
     );
 }

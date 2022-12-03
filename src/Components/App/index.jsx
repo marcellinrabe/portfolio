@@ -19,16 +19,14 @@ function App() {
     return (
         <DataProvider>
             <div id="app" className="overflow-hidden">
-                <Particle>
-                    <div className="position-relative">
-                        <Header />
-                        <Cover />
-                        <Parcours />
-                        <Skills />
-                        <Works />
-                        <Contact />
-                    </div>
-                </Particle>
+                <Header />
+                <Cover>
+                    <Particle container={<Parcours />} />
+                </Cover>
+                <Parcours />
+                <Skills />
+                <Works />
+                <Contact />
             </div>
         </DataProvider>
     );

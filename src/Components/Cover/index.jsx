@@ -1,16 +1,17 @@
 import { useContext } from 'react';
 import { dataContext } from '../App/DataProvider';
-import Chat from './Chat';
+import Chat from './Chatbot';
 import Line from '../App/Line';
 import ExternalLink from '../App/ExternalLinks';
 import Links from './Links';
 
-export default function Cover() {
+export default function Cover({ children }) {
     const { About, Cover, user } = useContext(dataContext);
     const { socialNavlink } = About;
 
     return (
         <div id="cover">
+            {children}
             <div className="row">
                 <div className="col-md-7 col-lg-8 my-5 my-md-0">
                     <div className="title-2xl mx-1 mx-sm-2">
