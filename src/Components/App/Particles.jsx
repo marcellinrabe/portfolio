@@ -66,6 +66,9 @@ export default function Particle({ children }) {
                         },
                     },
                     detectRetina: true,
+                    fullScreen: {
+                        enable: false,
+                    },
                 }}
             />
             {children}
