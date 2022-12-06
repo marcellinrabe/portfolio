@@ -11,18 +11,18 @@ import Works from '../Works';
 import Contact from '../Contact';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../app.css';
-import Particle from './Particles';
+/* import Particle from './Particles';
+ */ import { useRef } from 'react';
 
 library.add(fas, far, fab);
 
 function App() {
+    const particlesContainer = useRef(0);
     return (
         <DataProvider>
             <div id="app" className="overflow-hidden">
                 <Header />
-                <Cover>
-                    <Particle container={<Parcours />} />
-                </Cover>
+                <Cover ref={particlesContainer} />
                 <Parcours />
                 <Skills />
                 <Works />

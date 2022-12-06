@@ -2,10 +2,8 @@ import { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
-export default function Particle({ children }) {
+export default function Particle({ container }) {
     const particlesInit = useCallback(async (engine) => {
-        console.log(engine);
-
         await loadFull(engine);
     }, []);
 
@@ -14,64 +12,62 @@ export default function Particle({ children }) {
     }, []);
 
     return (
-        <div className="position-relative">
-            <Particles
-                init={particlesInit}
-                loaded={particlesLoaded}
-                className="position-absolute"
-                options={{
-                    fpsLimit: 120,
-                    background: {
-                        value: 'transparent',
+        <Particles
+            init={particlesInit}
+            loaded={particlesLoaded}
+            className="position-absolute top-0 w-100 h-100"
+            container={container}
+            options={{
+                fpsLimit: 120,
+                background: {
+                    value: 'transparent',
+                },
+                particles: {
+                    color: {
+                        value: '#000',
                     },
-                    particles: {
-                        color: {
-                            value: '#000',
-                        },
-                        links: {
-                            color: '#000',
-                            distance: 150,
-                            enable: true,
-                            opacity: 0.6,
-                            width: 1,
-                        },
-                        collisions: {
-                            enable: true,
-                        },
-                        move: {
-                            directions: 'none',
-                            enable: true,
-                            outModes: {
-                                default: 'bounce',
-                            },
-                            random: false,
-                            speed: 1,
-                            straight: false,
-                        },
-                        number: {
-                            density: {
-                                enable: true,
-                                area: 800,
-                            },
-                            value: 20,
-                        },
-                        opacity: {
-                            value: 0.2,
-                        },
-                        shape: {
-                            type: 'circle',
-                        },
-                        size: {
-                            value: { min: 1, max: 4 },
-                        },
+                    links: {
+                        color: '#000',
+                        distance: 50,
+                        enable: true,
+                        opacity: 0.6,
+                        width: 1,
                     },
-                    detectRetina: true,
-                    fullScreen: {
-                        enable: false,
+                    collisions: {
+                        enable: true,
                     },
-                }}
-            />
-            {children}
-        </div>
+                    move: {
+                        directions: 'none',
+                        enable: true,
+                        outModes: {
+                            default: 'bounce',
+                        },
+                        random: true,
+                        speed: 1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 500,
+                        },
+                        value: 50,
+                    },
+                    opacity: {
+                        value: 0.2,
+                    },
+                    shape: {
+                        type: 'circle',
+                    },
+                    size: {
+                        value: { min: 1, max: 5 },
+                    },
+                },
+                detectRetina: true,
+                fullScreen: {
+                    enable: false,
+                },
+            }}
+        />
     );
 }

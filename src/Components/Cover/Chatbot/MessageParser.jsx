@@ -2,9 +2,10 @@ import React from 'react';
 
 export default function MessageParser({ children, actions }) {
     const parse = (message) => {
-        if (message.includes('Qui suis-je')) {
+        const messageCleaned = message.toLowerCase();
+        if (messageCleaned.includes('Qui suis-je')) {
             actions.whoIAm();
-        } else if (message.includes('options')) {
+        } else if (messageCleaned.includes('options')) {
             actions.testSendingOption();
         }
     };

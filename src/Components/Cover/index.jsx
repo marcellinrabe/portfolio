@@ -4,15 +4,16 @@ import Chat from './Chatbot';
 import Line from '../App/Line';
 import ExternalLink from '../App/ExternalLinks';
 import Links from './Links';
+import Particle from '../App/Particles';
 
-export default function Cover({ children }) {
+export default function Cover() {
     const { About, Cover, user } = useContext(dataContext);
     const { socialNavlink } = About;
 
     return (
         <div id="cover">
-            {children}
-            <div className="row">
+            <div className="row position-relative">
+                <Particle />
                 <div className="col-md-7 col-lg-8 my-5 my-md-0">
                     <div className="title-2xl mx-1 mx-sm-2">
                         {Cover.greeting}

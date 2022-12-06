@@ -31,8 +31,11 @@ export default function ActionProvider({
 
     const testSendingOption = () => {
         const message = createCustomMessage('Qui suis-je', 'options', {
-            payload: options,
+            payload: {
+                options: options,
+            },
         });
+
         pushMessage(message);
     };
 
